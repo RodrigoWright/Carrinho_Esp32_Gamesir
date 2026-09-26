@@ -12,6 +12,14 @@
 #include "esp_chip_info.h"
 #include "esp_flash.h"
 #include "esp_system.h"
+#include "driver/gpio.h"
+
+#define GPIO_LED 2
+
+void setup(void)
+{
+    pinMode(GPIO_LED, OUTPUT);
+};
 
 void app_main(void)
 {
