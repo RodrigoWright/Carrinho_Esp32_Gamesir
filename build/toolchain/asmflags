@@ -1,0 +1,6 @@
+-Wno-frame-address
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero
+"-specs=C:/Pessoal/Projeto_carrinho/Carrinho_Esp32_Gamesir/build/specs/picolibc.specs"
