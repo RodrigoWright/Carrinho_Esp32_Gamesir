@@ -3,5 +3,5 @@
 -fno-builtin-memcpy
 -fno-builtin-memset
 -fno-builtin-bzero
-"-specs=C:/Pessoal/Projeto_carrinho/Carrinho_Esp32_Gamesir/build/specs/picolibc.specs"
+"-specs=C:/Users/Index/Documents/carrinho/Carrinho_Esp32_Gamesir/build/specs/picolibc.specs"
 -fno-rtti

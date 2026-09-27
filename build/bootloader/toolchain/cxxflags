@@ -1,4 +1,4 @@
-"-specs=C:/Pessoal/Projeto_carrinho/Carrinho_Esp32_Gamesir/build/bootloader/specs/picolibc.specs"
+"-specs=C:/Users/Index/Documents/carrinho/Carrinho_Esp32_Gamesir/build/bootloader/specs/picolibc.specs"
 -Wno-frame-address
 -mlongcalls
 -fno-builtin-memcpy

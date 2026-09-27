@@ -1,4 +1,4 @@
-/* * Data converted from C:/Pessoal/Projeto_carrinho/Carrinho_Esp32_Gamesir/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from C:/Users/Index/Documents/carrinho/Carrinho_Esp32_Gamesir/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)

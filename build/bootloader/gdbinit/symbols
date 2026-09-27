@@ -22,4 +22,4 @@ set confirm off
 set confirm on
 
 # Load application symbols
-file C:/Pessoal/Projeto_carrinho/Carrinho_Esp32_Gamesir/build/bootloader/bootloader.elf
+file C:/Users/Index/Documents/carrinho/Carrinho_Esp32_Gamesir/build/bootloader/bootloader.elf
