@@ -12,6 +12,7 @@
 #include "driver/gpio.h"
 #include "driver/ledc.h"
 #include "wifi.hpp"
+#include "server.hpp"
 
 gpio_num_t BOARD_LED = GPIO_NUM_2;
 int SERVO_PWM_PIN = 14;
@@ -41,7 +42,6 @@ void setup(void)
     ledc_channel.gpio_num       = SERVO_PWM_PIN;
     ledc_channel.speed_mode     = LEDC_LOW_SPEED_MODE;
     ledc_channel.channel        = LEDC_CHANNEL_0;
-    ledc_channel.intr_type      = LEDC_INTR_DISABLE;
     ledc_channel.timer_sel      = LEDC_TIMER_0;
     ledc_channel.duty           = 0;
     ledc_channel.hpoint         = 0;
@@ -67,7 +67,7 @@ extern "C" void app_main(void)
     // 4º: Parâmetros extras (NULL)
     // 5º: Prioridade (5 é uma prioridade alta)
     // 6º: Identificador da tarefa (NULL)
-    xTaskCreate(iniciar_wifi_task, "Task_WiFi", 4096, NULL, 5, NULL);
+    xTaskCreate(iniciar_wifi_task, "Task_WiFi", 4096, NULL, 1, NULL);
 
     while (1) {
         printf("Servo: Movendo para Mínimo (0 graus)\n");

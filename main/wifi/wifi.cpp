@@ -8,6 +8,7 @@
 #include "esp_event.h"
 #include "esp_log.h"
 #include "nvs_flash.h"
+#include "server.hpp"
 
 // Define o nome e senha da rede do seu carrinho
 #define NOME_REDE_CARRINHO "Carrinho_Gamesir"
@@ -48,7 +49,7 @@ void iniciar_wifi_task(void *pvParameters) {
     strcpy((char*)wifi_config.ap.ssid, NOME_REDE_CARRINHO);
     strcpy((char*)wifi_config.ap.password, SENHA_REDE_CARRINHO);
     wifi_config.ap.ssid_len = strlen(NOME_REDE_CARRINHO);
-    wifi_config.ap.max_connection = 2; // Só permite até 2 aparelhos conectados
+    wifi_config.ap.max_connection = 1;
     wifi_config.ap.authmode = WIFI_AUTH_WPA2_PSK;
 
     // Inicia a antena como Access Point
@@ -58,5 +59,6 @@ void iniciar_wifi_task(void *pvParameters) {
 
     printf("Rede Wi-Fi '%s' criada com sucesso! IP do carrinho: 192.168.4.1\n", NOME_REDE_CARRINHO);
 
+    xTaskCreate(iniciar_servidor_udp, "Task_Server", 4096, NULL, 2, NULL);
     vTaskDelete(NULL);
 }

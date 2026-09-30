@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "esp32_carrinho",
-    "project_version":    "4b7d390-dirty",
+    "project_version":    "571a9a1-dirty",
     "project_path":       "C:/Users/Index/Documents/carrinho/Carrinho_Esp32_Gamesir",
     "idf_path":           "C:/esp/v6.1/esp-idf",
     "build_dir":          "C:/Users/Index/Documents/carrinho/Carrinho_Esp32_Gamesir/build",
@@ -890,13 +890,13 @@
             "dir": "C:/Users/Index/Documents/carrinho/Carrinho_Esp32_Gamesir/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [ "spi_flash", "esp_driver_gpio", "esp_driver_ledc", "esp_wifi", "nvs_flash", "esp_event", "esp_netif" ],
+            "reqs": [ "spi_flash", "esp_driver_gpio", "esp_driver_ledc", "esp_wifi", "nvs_flash", "esp_event", "esp_netif", "lwip" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "C:/Users/Index/Documents/carrinho/Carrinho_Esp32_Gamesir/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/Users/Index/Documents/carrinho/Carrinho_Esp32_Gamesir/main/main.cpp", "C:/Users/Index/Documents/carrinho/Carrinho_Esp32_Gamesir/main/wifi/wifi.cpp" ],
-            "include_dirs": [ "." ]
+            "sources": [ "C:/Users/Index/Documents/carrinho/Carrinho_Esp32_Gamesir/main/main.cpp", "C:/Users/Index/Documents/carrinho/Carrinho_Esp32_Gamesir/main/wifi/wifi.cpp", "C:/Users/Index/Documents/carrinho/Carrinho_Esp32_Gamesir/main/wifi/server.cpp" ],
+            "include_dirs": [ ".", "wifi" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -2955,11 +2955,11 @@
             "dir": "C:/Users/Index/Documents/carrinho/Carrinho_Esp32_Gamesir/main",
             "source": "project_components",
             "lib": "__idf_main",
-            "reqs": [ "spi_flash", "esp_driver_gpio", "esp_driver_ledc", "esp_wifi", "nvs_flash", "esp_event", "esp_netif" ],
+            "reqs": [ "spi_flash", "esp_driver_gpio", "esp_driver_ledc", "esp_wifi", "nvs_flash", "esp_event", "esp_netif", "lwip" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "." ]
+            "include_dirs": [ ".", "wifi" ]
         }
     },
     "gdbinit_files": {
